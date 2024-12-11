@@ -1,0 +1,21 @@
+*** explicando como funciona cada acao do TODO e como fazela no js
+
+1-clicar no botao de "feito" e ficar marcado como concluido.
+
+primeiro passo:
+-primeiro e criado um evento no proprio documento do site de click usando a funcao *document.addEventListener("click", (e) => {})*
+-criamos variavel para armazenar o valor do click *const targetEl = e.target;*
+-e uma para saber qual e o elemento div pai ou mais proximo dele *const parentEl = targetEl.closest("div");* usando a funcao closest()
+-e ua variavel let para o o titulo *let todoTitle*
+
+segundo passo:
+-criamos condicoes para que quando clicadas adicion a classe a palavra facam aguma acao
+-*if (targetEl.classList.contains("finish-todo")){}* faz com que a classe dela seja adcionada a falavra "done"
+-que no css tem a estilizacao de completa como backround azul e list-style cortado
+
+2- clicar no botao de excluir
+
+primeiro passo:
+-no mesmo evento de click no documento nos criamos um if tambem para mapear se o botao de excluir foi clicado
+-usando (targetEl.classList.contains("remove-todo")) a palavra contains checa se onde esta clicado tem a palavra declarada ao lado
+-depois pegando o elemento pai que seria a div onde contem o botao, a div da lista e usa o metodo .remove para excluir
