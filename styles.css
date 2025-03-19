@@ -1,159 +1,169 @@
-/* Geral */
+/* Reset básico */
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: Verdana;
-    color: #333;
-  }
-  
-  body {
-    background-image: url("./img/bg.jpg");
-    background-position: center;
-    background-size: cover;
-  }
-  
-  button {
-    background-color: #fdfdfd;
-    color: #102f5e;
-    border: 2px solid #102f5e;
-    padding: 0.3rem 0.6rem;
-    font-size: 1rem;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: 0.4s;
-  }
-  
-  button:hover {
-    background-color: #102f5e;
-  }
-  
-  button:hover > i {
-    color: #fff;
-  }
-  
-  button i {
-    pointer-events: none;
-    color: #102f5e;
-    font-weight: bold;
-  }
-  
-  input,
-  select {
-    padding: 0.25rem 0.5rem;
-  }
-  
-  .hide {
-    display: none;
-  }
-  
-  /* Todo Header */
-  .todo-container {
-    max-width: 450px;
-    margin: 3rem auto 0;
-    background-color: #fdfdfd;
-    padding: 1.5rem;
-    border-radius: 15px;
-  }
-  
-  .todo-container header {
-    text-align: center;
-    padding: 0 1rem 1rem;
-    border-bottom: 1px solid #ccc;
-  }
-  
-  /* Todo Form */
-  #todo-form,
-  #edit-form {
-    padding: 1rem;
-    border-bottom: 1px solid #ccc;
-  }
-  
-  #todo-form p,
-  #edit-form p {
-    margin-bottom: 0.5rem;
-    font-weight: bold;
-  }
-  
-  .form-control {
-    display: flex;
-  }
-  
-  .form-control input {
-    margin-right: 0.3rem;
-  }
-  
-  #cancel-edit-btn {
-    margin-top: 1rem;
-    color: #444;
-  }
-  
-  /* Todo Toolbar */
-  #toolbar {
-    padding: 1rem;
-    border-bottom: 1px solid #ccc;
-    display: flex;
-  }
-  
-  #toolbar h4 {
-    margin-bottom: 0.5rem;
-  }
-  
-  #search {
-    border-right: 1px solid #ddd;
-    padding-right: 1rem;
-    margin-right: 1rem;
-    width: 65%;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  #search form {
-    display: flex;
-  }
-  
-  #search input {
-    width: 100%;
-    margin-right: 0.3rem;
-  }
-  
-  #filter {
-    width: 35%;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  #filter select {
-    flex: 1;
-  }
-  
-  /* Todo List */
-  .todo {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 1rem 1rem;
-    border-bottom: 1px solid #ddd;
-    transition: 0.3s;
-  }
-  
-  .todo h3 {
-    flex: 1;
-    font-size: 0.9rem;
-  }
-  
-  .todo button {
-    margin-left: 0.4rem;
-  }
-  
-  .done {
-    background: #395169;
-  }
-  
-  .done h3 {
-    color: #fff;
-    text-decoration: line-through;
-    font-style: italic;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.todo-container {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 500px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 24px;
+  color: #6e8efb;
+}
+
+p {
+  font-size: 14px;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+/* Estilizando Formulários */
+.form-control {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+input {
+  flex: 1;
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+input:focus {
+  border-color: #6e8efb;
+  outline: none;
+}
+
+button {
+  padding: 10px;
+  border: none;
+  background: #6e8efb;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #5768c5;
+}
+
+/* Estilizando a Toolbar */
+#toolbar {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+#toolbar h4 {
+  color: #333;
+  font-size: 14px;
+}
+
+#search form,
+#filter {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+#search-input {
+  width: 140px;
+}
+
+#erase-button {
+  background: #ff6b6b;
+}
+
+#erase-button:hover {
+  background: #e05757;
+}
+
+/* Lista de Tarefas */
+#todo-list {
+  margin-top: 20px;
+}
+
+.todo {
+  background: #f9f9f9;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.todo h3 {
+  font-size: 16px;
+  flex: 1;
+}
+
+.finish-todo {
+  background: #4caf50;
+}
+
+.finish-todo:hover {
+  background: #3a9b3a;
+}
+
+.edit-todo {
+  background: #ffc107;
+}
+
+.edit-todo:hover {
+  background: #e0a800;
+}
+
+.remove-todo {
+  background: #ff6b6b;
+}
+
+.remove-todo:hover {
+  background: #e05757;
+}
+
+/* Escondendo Formulário de Edição */
+.hide {
+  display: none;
+}
+
+/* Botão de Cancelar */
+#cancel-edit-btn {
+  background: #888;
+  margin-top: 10px;
+  display: block;
+  width: 100%;
+}
+
+#cancel-edit-btn:hover {
+  background: #777;
+}
